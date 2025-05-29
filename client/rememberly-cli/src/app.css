@@ -1,4 +1,6 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   /* color-scheme: light dark; */
+  background-color: #303030;
+  color: #FAFAFA;
 }
