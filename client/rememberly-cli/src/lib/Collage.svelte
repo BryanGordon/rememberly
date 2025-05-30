@@ -12,19 +12,33 @@
     <div>
       <img src={Image1} alt="imagen">
     </div>
+
+    <div>
+      <img src={Image1} alt="imagen">
+    </div>
+
+    <div>
+      <img src={Image1} alt="imagen">
+    </div>
   </article>
 </section>
 
 <style>
   section {
-    width: 80%;
+    width: 90%;
     padding: 10px;
   }
 
   article {
-    max-width: 95dvh;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    gap: 10px;
+  }
+
+  img {
+    width: 350px;
+    min-width: 100%;
+    max-width: 25%;
+    height: 280px;
   }
 </style>
