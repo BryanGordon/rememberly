@@ -32,7 +32,12 @@
   article {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
-    gap: 10px;
+    gap: 15px;
+  }
+
+  img:hover {
+    cursor: pointer;
+    transform: scale(1.02);
   }
 
   img {
@@ -40,5 +45,9 @@
     min-width: 100%;
     max-width: 25%;
     height: 280px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px #181818;
+    transition: transform 0.2s ease-in;
   }
+  
 </style>
