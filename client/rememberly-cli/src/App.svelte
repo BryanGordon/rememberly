@@ -32,7 +32,7 @@
   }
 
   footer {
-    padding: 4px;
+    padding: 15px;
     background: #000;
     margin-top: auto;
   }
