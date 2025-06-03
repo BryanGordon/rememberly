@@ -1,9 +1,11 @@
 import express from 'express'
 import Images from './images.json' with {type: 'json'}
+import { corsMiddleware } from './middleware/cors.js'
 
 const app = express()
 const allImages = Images
 
+app.use(corsMiddleware())
 app.use(express.json())
 
 app.get('/', (req, res) => {
