@@ -1,21 +1,21 @@
 [{
   "id": "1",
-  "image": "https://mjrqcemffmprtozbqmhi.supabase.co/storage/v1/object/sign/example/profile.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MzQ1MGRmZC02NTNhLTRmMTItYjQzNy02ZDBlODczMTY2NTMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJleGFtcGxlL3Byb2ZpbGUuanBnIiwiaWF0IjoxNzQ4OTEwNjg3LCJleHAiOjE3NDk1MTU0ODd9.FclqqvIaK_O3uCidhEJrSbqpwZI4FKppDRom8xJjRYE",
+  "image": "",
   "alt": "Simplemete pepe"
 },
 {
   "id": "2",
-  "image": "https://mjrqcemffmprtozbqmhi.supabase.co/storage/v1/object/sign/example/profile.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MzQ1MGRmZC02NTNhLTRmMTItYjQzNy02ZDBlODczMTY2NTMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJleGFtcGxlL3Byb2ZpbGUuanBnIiwiaWF0IjoxNzQ4OTEwNjg3LCJleHAiOjE3NDk1MTU0ODd9.FclqqvIaK_O3uCidhEJrSbqpwZI4FKppDRom8xJjRYE",
+  "image": "",
   "alt": "Imagen de perfil"
 },
 {
   "id": "3",
-  "image": "https://mjrqcemffmprtozbqmhi.supabase.co/storage/v1/object/sign/example/Screenshot_20210820_121010.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MzQ1MGRmZC02NTNhLTRmMTItYjQzNy02ZDBlODczMTY2NTMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJleGFtcGxlL1NjcmVlbnNob3RfMjAyMTA4MjBfMTIxMDEwLmpwZyIsImlhdCI6MTc0ODkxMDc1NSwiZXhwIjoxNzQ5NTE1NTU1fQ.DMTBIaviGKJeofvJrgsilcigSxREmrIGgJy1q2LDTgE",
+  "image": "",
   "alt": "Pepe con gafas"
 },
 {
   "id": "4",
-  "image": "https://mjrqcemffmprtozbqmhi.supabase.co/storage/v1/object/sign/example/HomerDomido.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MzQ1MGRmZC02NTNhLTRmMTItYjQzNy02ZDBlODczMTY2NTMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJleGFtcGxlL0hvbWVyRG9taWRvLmpwZWciLCJpYXQiOjE3NDg5MTA0NDcsImV4cCI6MTc0OTUxNTI0N30.Oei3CRWr_XbpA16ddh-_aLjocbSeNBLAH2htNlhZu_Y",
+  "image": "",
   "alt": "Homer dormido"
 }
 ]
