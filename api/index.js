@@ -1,7 +1,8 @@
 import express from 'express'
+import Images from './images.json' with {type: 'json'}
 
 const app = express()
-const allImages = []
+const allImages = Images
 
 app.use(express.json())
 
