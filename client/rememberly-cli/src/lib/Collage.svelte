@@ -1,10 +1,11 @@
 <script lang="ts">
   import Image from '../assets/pepe.jpg'
   import Image1 from '../assets/profile.jpg'
-/*
+
   const data = fetch('http://localhost:3000/images')
     .then(res => res.json())
-    */
+  
+  export let setBigImage: (image) => null
 </script>
 
 <section>
@@ -29,8 +30,17 @@
  
 
   <h1 class="middle-api">Datos desde la api</h1>
-
-
+  <article>
+    {#await data}
+      <p>Cargando....</p>
+    {:then images} 
+      {#each images as image}
+        <div>
+          <img src={image.image} alt="imagen" on:click={() => setBigImage(image.image)}>
+        </div>
+      {/each}
+    {/await}
+  </article>
 </section>
 
 
