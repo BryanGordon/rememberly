@@ -11,7 +11,7 @@
 
   <div>
     <h1>Rememberly</h1>
-    <h3>Vuelve a recordar todos tus buenos recuerdos</h3>
+    <h3>Vuelve a recordar todos tus buenos momentos</h3>
   </div>
   <Collage />
 
