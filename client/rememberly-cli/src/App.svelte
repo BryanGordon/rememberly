@@ -2,7 +2,20 @@
   import Collage from './lib/Collage.svelte';
 
   import Image1 from './assets/profile.jpg'
-    import Close from './icons/Close.svelte';
+  import Close from './icons/Close.svelte';
+
+  let showModal = false
+  let modalImage = null
+
+  const openModal = (image) => {
+    showModal = true
+    modalImage = image
+  }
+
+  const closeModal = () => {
+    showModal = false
+    modalImage = null
+  }
 
 </script>
 
@@ -13,15 +26,18 @@
     <h1>Rememberly</h1>
     <h3>Vuelve a recordar todos tus buenos momentos</h3>
   </div>
-  <Collage />
+  <Collage setBigImage={openModal}/>
 
 </section>
- <div class="pop">
-  <div class="close-modal">
+{#if showModal}
+  <div class="pop">
+  <button class="close-modal" on:click={closeModal()}>
     <Close />
+  </button>
+    <img class="img-pop" src={modalImage} alt="imagen">
   </div>
-    <img class="img-pop" src={Image1} alt="imagen">
-  </div>
+    
+{/if}
 
 </main>
 
@@ -55,7 +71,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    display: none;
   }
 
   .img-pop {
@@ -70,9 +85,15 @@
 
   .close-modal {
     position: fixed;
-    top: 0;
-    right: 0;
-    padding: 30px;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: white;
+  }
+
+  .close-modal:hover {
+    cursor: pointer;
   }
   
   footer {
