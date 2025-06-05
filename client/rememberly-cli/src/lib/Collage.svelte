@@ -1,9 +1,10 @@
 <script lang="ts">
   import Image from '../assets/pepe.jpg'
   import Image1 from '../assets/profile.jpg'
-
+/*
   const data = fetch('http://localhost:3000/images')
     .then(res => res.json())
+    */
 </script>
 
 <section>
@@ -25,22 +26,16 @@
     </div>
   </article>
 
+ 
+
   <h1 class="middle-api">Datos desde la api</h1>
 
-  <article>
-    {#await data}
-      <h4>Cargando...</h4>
-    {:then images}
-      {#each images as image}
-        <div>
-          <img src={image.image} alt={image.alt}>
-        </div>
-      {/each}
-    {/await}
-  </article>
+
 </section>
 
+
 <style>
+
   section {
     width: 90%;
     padding: 10px;
