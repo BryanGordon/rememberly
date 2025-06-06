@@ -5,31 +5,12 @@
   const data = fetch('http://localhost:3000/images')
     .then(res => res.json())
   
-  export let setBigImage: (image) => null
+  export let setBigImage: (image: string) => null
 </script>
 
 <section>
-  <article>
-    <div>
-      <img src={Image} alt="imagen">
-    </div>
-
-    <div>
-      <img src={Image1} alt="imagen">
-    </div>
-
-    <div>
-      <img src={Image1} alt="imagen">
-    </div>
-
-    <div>
-      <img src={Image1} alt="imagen">
-    </div>
-  </article>
-
- 
-
   <h1 class="middle-api">Datos desde la api</h1>
+
   <article>
     {#await data}
       <p>Cargando....</p>
@@ -41,11 +22,10 @@
       {/each}
     {/await}
   </article>
+
 </section>
 
-
 <style>
-
   section {
     width: 90%;
     padding: 10px;
@@ -78,10 +58,4 @@
     margin-block: 30px;
   }
 
-  h4 {
-    color: skyblue;
-    text-align: center;
-    font-weight: bold;
-  }
-  
 </style>
