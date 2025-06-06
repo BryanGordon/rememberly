@@ -41,6 +41,9 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+  }
+
+  img:hover {
     transform: scale(1.02);
   }
 
