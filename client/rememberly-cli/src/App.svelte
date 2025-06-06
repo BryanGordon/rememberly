@@ -5,11 +5,13 @@
   import Close from './icons/Close.svelte';
 
   let showModal = false
-  let modalImage = null
+  let modalImage: string | null = null
 
-  const openModal = (image) => {
+  const openModal = (image: string) => {
     showModal = true
     modalImage = image
+    
+    return null
   }
 
   const closeModal = () => {
@@ -31,7 +33,7 @@
 </section>
 {#if showModal}
   <div class="pop">
-  <button class="close-modal" on:click={closeModal()}>
+  <button class="close-modal" on:click={() => closeModal()}>
     <Close />
   </button>
     <img class="img-pop" src={modalImage} alt="imagen">
