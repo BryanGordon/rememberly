@@ -16,9 +16,9 @@
       <p>Cargando....</p>
     {:then images} 
       {#each images as image}
-        <div>
-          <img src={image.image} alt="imagen" on:click={() => setBigImage(image.image)}>
-        </div>
+        <button on:click={() => setBigImage(image.image)}>
+          <img src={image.image} alt="imagen" >
+        </button>
       {/each}
     {/await}
   </article>
@@ -37,7 +37,9 @@
     gap: 15px;
   }
 
-  img:hover {
+  button {
+    background-color: transparent;
+    border: none;
     cursor: pointer;
     transform: scale(1.02);
   }
