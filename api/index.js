@@ -6,7 +6,9 @@ import 'dotenv/config'
 
 const allImages = Images
 const connection = process.env.DATABASE_URL
-const sql = postgres(connection)
+const sql = postgres(connection, {
+  ssl: 'require'
+})
 const app = express()
 
 app.use(corsMiddleware())
@@ -22,11 +24,9 @@ app.get('/images', (req, res) => {
 */
 
 // Conexion con la bdd
-app.get('/images', (req, res) => {
-  sql`SELECT * FROM Images`
-    .then(images => {
-      res.json(images)
-    })
+app.get('/images', async (req, res) => {
+  const images = await sql`SELECT * FROM images`
+  res.json(images)
 })
 
 const PORT = process.env.PORT ?? 3000
