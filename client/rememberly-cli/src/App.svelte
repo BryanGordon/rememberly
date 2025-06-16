@@ -22,21 +22,21 @@
 
 <main>
   <section>
+    <div>
+      <h1>Rememberly</h1>
+      <h3>Vuelve a recordar todos tus buenos momentos</h3>
+    </div>
 
-  <div>
-    <h1>Rememberly</h1>
-    <h3>Vuelve a recordar todos tus buenos momentos</h3>
-  </div>
-  <Collage setBigImage={openModal}/>
-
+    <Collage setBigImage={openModal}/>
 </section>
+
 {#if showModal}
   <div class="pop">
-  <button class="close-modal" on:click={() => closeModal()}>
-    <Close />
-  </button>
-    <img class="img-pop" src={modalImage} alt="imagen">
-  </div>
+    <button class="close-modal" on:click={() => closeModal()}>
+      <Close />
+    </button>
+      <img class="img-pop" src={modalImage} alt="imagen" />
+    </div>
     
 {/if}
 
