@@ -25,6 +25,7 @@
 <style>
   section {
     width: 90%;
+    margin: 0 auto;
     padding: 10px;
   }
 
