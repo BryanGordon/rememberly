@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Image } from '../types/types'
 
-  const data = fetch('http://localhost:3000/images')
+  const data: Promise<Image[]> = fetch('http://localhost:3000/images')
     .then(res => res.json())
   
   export let setBigImage: (image: string) => null
@@ -13,8 +13,8 @@
       <p>Cargando....</p>
     {:then images} 
       {#each images as image}
-        <button on:click={() => setBigImage(image.image)}>
-          <img src={image.image} alt="imagen" >
+        <button on:click={() => setBigImage(image.image_link)}>
+          <img src={image.image_link} alt={image.alt} >
         </button>
       {/each}
     {/await}
