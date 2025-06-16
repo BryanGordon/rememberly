@@ -1,6 +1,5 @@
 <script lang="ts">
-  import Image from '../assets/pepe.jpg'
-  import Image1 from '../assets/profile.jpg'
+  import type { Image } from '../types/types'
 
   const data = fetch('http://localhost:3000/images')
     .then(res => res.json())
@@ -9,8 +8,6 @@
 </script>
 
 <section>
-  <h1 class="middle-api">Datos desde la api</h1>
-
   <article>
     {#await data}
       <p>Cargando....</p>
@@ -56,11 +53,4 @@
     box-shadow: 2px 2px 10px #181818;
     transition: transform 0.2s ease-in;
   }
-
-  .middle-api {
-    text-align: center;
-    color: yellowgreen;
-    margin-block: 30px;
-  }
-
 </style>
