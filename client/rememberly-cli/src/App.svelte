@@ -1,8 +1,7 @@
 <script lang="ts">
-  import Collage from './lib/Collage.svelte';
-
-  import Image1 from './assets/profile.jpg'
   import Close from './icons/Close.svelte';
+  import Collage from './lib/Collage.svelte';
+    import type { Image } from './types/types';
 
   let showModal = false
   let modalImage: string | null = null
