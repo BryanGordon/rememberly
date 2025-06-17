@@ -1,12 +1,7 @@
 import express from 'express'
 import { corsMiddleware } from './middleware/cors.js'
-import postgres from 'postgres'
-import 'dotenv/config'
+import sql from './db-supa.js'
 
-const connection = process.env.DATABASE_URL
-const sql = postgres(connection, {
-  ssl: 'require'
-})
 const app = express()
 
 app.use(corsMiddleware())
