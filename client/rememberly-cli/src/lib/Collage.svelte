@@ -17,6 +17,8 @@
           <img src={image.image_link} alt={image.alt} >
         </button>
       {/each}
+    {:catch error}
+        <p>Error al mostrar las imagenes, intentelo mas tarde.</p>
     {/await}
   </article>
 
