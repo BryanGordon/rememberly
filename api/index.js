@@ -17,8 +17,13 @@ app.get('/', (req, res) => {
 })
 
 app.get('/images', async (req, res) => {
-  const images = await sql`SELECT * FROM images`
-  res.json(images)
+  try {
+    const images = await sql`SELECT * FROM images`
+    res.json(images)
+  }
+  catch (error) {
+    res.status(500).json({error: 'Something went wrong'})
+  }
 })
 
 const PORT = process.env.PORT ?? 3000
