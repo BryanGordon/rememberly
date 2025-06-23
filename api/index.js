@@ -1,25 +1,17 @@
-import express from 'express'
+import express, { json } from 'express'
 import { corsMiddleware } from './middleware/cors.js'
-import sql from './db-supa.js'
+import { routerImages } from './routes/routesImages.js'
 
 const app = express()
 
 app.use(corsMiddleware())
-app.use(express.json())
+app.use(json())
 
 app.get('/', (req, res) => {
   res.json({message: 'Inicio del server'})
 })
 
-app.get('/images', async (req, res) => {
-  try {
-    const images = await sql`SELECT * FROM images`
-    res.json(images)
-  }
-  catch (error) {
-    res.status(500).json({error: 'Something went wrong'})
-  }
-})
+app.get('/images', routerImages)
 
 const PORT = process.env.PORT ?? 3000
 app.listen(PORT, () => {
