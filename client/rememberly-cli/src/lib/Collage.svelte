@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Image } from '../types/types'
 
-  const data: Promise<Image[]> = fetch('http://localhost:3000/images')
+  const data: Promise<Image[]> = fetch('https://rememberly-1xpo.onrender.com/images')
     .then(res => res.json())
   
   export let setBigImage: (image: string) => null
