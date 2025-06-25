@@ -55,11 +55,13 @@
   h1 {
     text-align: center;
     padding-bottom: 20px;
+    font-size: 40px;
   }
 
   h3 {
     width: 97%;
     margin: 0 auto;
+    font-size: 20px;
   }
 
   .pop {
