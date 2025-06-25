@@ -2,5 +2,15 @@
 
 </script>
 
-<h1>Loading...</h1>
+<h2>Loading...</h2>
+
+<style>
+  h2 {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 28px;
+    color: aliceblue;
+    text-align: center;
+  }
+</style>
 
