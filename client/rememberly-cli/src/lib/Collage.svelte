@@ -1,5 +1,7 @@
 <script lang="ts">
   import type { Image } from '../types/types'
+    import Error from './Error.svelte';
+    import Loading from './Loading.svelte';
 
   const data: Promise<Image[]> = fetch('https://rememberly-1xpo.onrender.com/images')
     .then(res => res.json())
@@ -8,19 +10,19 @@
 </script>
 
 <section>
-  <article>
-    {#await data}
-      <p>Cargando....</p>
-    {:then images} 
+  {#await data}
+    <Loading />
+    {:then images}
+    <article>
       {#each images as image}
         <button on:click={() => setBigImage(image.image_link)}>
           <img src={image.image_link} alt={image.alt} >
         </button>
       {/each}
-    {:catch error}
-        <p>Error al mostrar las imagenes, intentelo mas tarde.</p>
+    </article>
+      {:catch error}
+      <Error />
     {/await}
-  </article>
 
 </section>
 
