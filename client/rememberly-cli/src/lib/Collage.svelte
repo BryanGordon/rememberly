@@ -1,12 +1,11 @@
 <script lang="ts">
-  import type { Image } from '../types/types'
-    import Error from './Error.svelte';
-    import Loading from './Loading.svelte';
+  import Error from './Error.svelte'
+  import Loading from './Loading.svelte'
+  import { getFunctions } from '../utils/data'
 
-  const data: Promise<Image[]> = fetch('https://rememberly-1xpo.onrender.com/images')
-    .then(res => res.json())
-  
   export let setBigImage: (image: string) => null
+  
+  const { data } = getFunctions()
 </script>
 
 <section>
@@ -15,7 +14,7 @@
     {:then images}
     <article>
       {#each images as image}
-        <button on:click={() => setBigImage(image.image_link)}>
+        <button onclick={() => setBigImage(image.image_link)}>
           <img src={image.image_link} alt={image.alt} >
         </button>
       {/each}
@@ -57,5 +56,6 @@
     border-radius: 15px;
     box-shadow: 2px 2px 10px #181818;
     transition: transform 0.2s ease-in;
+    object-fit: cover;
   }
 </style>
