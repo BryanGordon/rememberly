@@ -1,10 +1,10 @@
 <script lang="ts">
-  import Close from './icons/Close.svelte';
-  import Collage from './lib/Collage.svelte';
+  import Close from './icons/Close.svelte'
+  import Collage from './lib/Collage.svelte'
 
-  let showModal = false
-  let modalImage: string | null = null
-
+  let showModal = $state(false)
+  let modalImage: string | null = $state(null)
+  
   const openModal = (image: string) => {
     showModal = true
     modalImage = image
@@ -16,7 +16,6 @@
     showModal = false
     modalImage = null
   }
-
 </script>
 
 <main>
@@ -31,7 +30,7 @@
 
 {#if showModal}
   <div class="pop">
-    <button class="close-modal" on:click={() => closeModal()}>
+    <button class="close-modal" onclick={() => closeModal()}>
       <Close />
     </button>
       <img class="img-pop" src={modalImage} alt="imagen" />
@@ -99,7 +98,7 @@
   }
   
   footer {
-    padding: 15px;
+    padding: 20px;
     background: #000;
     margin-top: auto;
   }
