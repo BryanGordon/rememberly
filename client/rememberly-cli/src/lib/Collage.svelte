@@ -19,9 +19,9 @@
         </button>
       {/each}
     </article>
-      {:catch error}
+    {:catch error}
       <Error />
-    {/await}
+  {/await}
 
 </section>
 
