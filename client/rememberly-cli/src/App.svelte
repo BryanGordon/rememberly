@@ -102,4 +102,10 @@
     background: #000;
     margin-top: auto;
   }
+
+  @media (width <= 1150px) {
+    .img-pop {
+      object-fit: contain;
+    }
+  }
 </style>
