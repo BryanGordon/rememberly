@@ -61,4 +61,21 @@
     transition: transform 0.2s ease-in;
     object-fit: cover;
   }
+
+  @media (width <= 1270px) {
+    article {
+      display: block;
+    }
+
+    button {
+      width: 50%;
+      padding-bottom: 15px;
+    }
+  }
+
+  @media (width <= 700px) {
+    button {
+      width: 100%;
+    }
+  }
 </style>
