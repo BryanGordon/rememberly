@@ -1,11 +1,14 @@
 <script lang="ts">
   import Error from './Error.svelte'
   import Loading from './Loading.svelte'
-  import { getFunctions } from '../utils/data'
-
+  // import { getFunctions } from '../utils/data'
   export let setBigImage: (image: string) => null
-  
-  const { data } = getFunctions()
+
+  const data = fetch('http://localhost:3000/images')
+    .then(res => res.json()
+    )
+  const local = "http://localhost:3000"
+  // const { data } = getFunctions()
 </script>
 
 <section>
@@ -14,8 +17,8 @@
     {:then images}
     <article>
       {#each images as image}
-        <button onclick={() => setBigImage(image.image_link)}>
-          <img src={image.image_link} alt={image.alt} >
+        <button onclick={() => setBigImage(`${local}` + image.image)}>
+          <img src={`${local}` + image.image} alt={image.alt} >
         </button>
       {/each}
     </article>
