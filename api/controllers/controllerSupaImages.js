@@ -1,9 +1,11 @@
-import { ModelSupaImages } from '../models/modelSupaImages.js'
+// import { ModelSupaImages } from '../models/modelSupaImages.js'
+import { ModelLocalImages } from '../models/modelLocalimages.js'
 
 export class ControllerSupaImges {
   static getImages = async (req, res) => {
     try {
-    const images = await ModelSupaImages.getImages()
+    const images = await ModelLocalImages.getImages()
+    // const images = await ModelSupaImages.getImages()
     res.json(images)
   }
   catch (error) {
