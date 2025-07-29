@@ -1,21 +1,31 @@
 [{
   "id": "1",
-  "image": "https://mjrqcemffmprtozbqmhi.supabase.co/storage/v1/object/public/example//HomerDomido.jpeg",
-  "alt": "Simplemete pepe"
+  "image": "/assets/fh5-my-pagani-zonda-woods.png",
+  "alt": "Pagani Zonda Zinque bosque"
 },
 {
   "id": "2",
-  "image": "https://mjrqcemffmprtozbqmhi.supabase.co/storage/v1/object/public/example//profile.jpg",
-  "alt": "Imagen de perfil"
+  "image": "/assets/fh5-my-porsche-carrera-yellow-back-bridge-clouds.png",
+  "alt": "Porsche 911 carrera S puente"
 },
 {
   "id": "3",
-  "image": "https://mjrqcemffmprtozbqmhi.supabase.co/storage/v1/object/public/example//Screenshot_20210820_121010.jpg",
-  "alt": "Pepe con gafas"
+  "image": "/assets/fh5-my-porsche-carrera-yellow-side.png",
+  "alt": "Porsche 911 carrera S manglar"
 },
 {
   "id": "4",
-  "image": "https://mjrqcemffmprtozbqmhi.supabase.co/storage/v1/object/public/example//HomerDomido.jpeg",
-  "alt": "Homer dormido"
+  "image": "/assets/fh5-my-porsche-panamera-back.png",
+  "alt": "Porsche panamera carretera"
+},
+{
+  "id": "5",
+  "image": "/assets/fh5-my-porsche-panamera-front-beach.png",
+  "alt": "Porsche panamera playa"
+},
+{
+  "id": "6",
+  "image": "/assets/g9qs6xez97871.jpg",
+  "alt": "Homer viendo un paisaje estrellado"
 }
 ]
