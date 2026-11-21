@@ -14,8 +14,8 @@
     {:then images}
     <article>
       {#each images as image}
-        <button onclick={() => setBigImage(image.image_link)}>
-          <img src={image.image_link} alt={image.alt} >
+        <button onclick={() => setBigImage(`http://localhost:3000${image.image}`)}>
+          <img src={`http://localhost:3000${image.image}`} alt={image.alt} >
         </button>
       {/each}
     </article>
