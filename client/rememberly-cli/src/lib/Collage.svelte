@@ -6,7 +6,7 @@
   export let setBigImage: (image: string) => null
   
   const { data } = getFunctions()
-  const host = import.meta.env.VITE_BACK_HOST_LOCAL
+  const host = import.meta.env.VITE_BACK_HOST
 </script>
 
 <section>
