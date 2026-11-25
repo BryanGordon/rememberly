@@ -3,7 +3,7 @@ import cors from 'cors'
 const ACCEPTED_ORINGINS = [
   'http://localhost:3000',
   'http://localhost:5173',
-  'https://rememberly-0f5c70.netlify.app/'
+  'https://rememberly-0f5c70.netlify.app'
 ]
 
 export const corsMiddleware = ({ accepted_origins = ACCEPTED_ORINGINS } = {}) => cors({
