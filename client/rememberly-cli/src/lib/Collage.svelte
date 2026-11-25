@@ -6,6 +6,7 @@
   export let setBigImage: (image: string) => null
   
   const { data } = getFunctions()
+  const host = import.meta.env.VITE_BACK_HOST_LOCAL
 </script>
 
 <section>
@@ -14,8 +15,8 @@
     {:then images}
     <article>
       {#each images as image}
-        <button onclick={() => setBigImage(`http://localhost:3000${image.image}`)}>
-          <img src={`http://localhost:3000${image.image}`} alt={image.alt} >
+        <button onclick={() => setBigImage(`${host + image.image}`)}>
+          <img src={`${host + image.image}`} alt={image.alt} >
         </button>
       {/each}
     </article>
